@@ -1,0 +1,13 @@
+variables:
+  projectDirectory: 'AzureDevOpsExampleApp'
+trigger:
+  - dev
+jobs:
+  - job: Android
+    displayName: 'Android Build'
+    pool:
+      vmImage: 'macOS-latest'
+    steps:
+    - script: |
+        echo 'Hello Wold'
+      displayName: Say Hello
