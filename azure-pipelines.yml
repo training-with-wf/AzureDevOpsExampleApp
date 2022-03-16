@@ -11,3 +11,16 @@ jobs:
     - script: |
         echo 'Hello Wold'
       displayName: Say Hello
+    - script: |
+        ./gradlew assembleRecette
+      displayName: Create Apk
+
+    - task: CopyFiles@2
+      condition: true
+      inputs:
+        contents: '**/?(*.apk)'
+        targetFolder: '$(build.artifactStagingDirectory)'
+        flattenFolders: true
+    - script: |
+        la -la
+      displayName: Create Apk
