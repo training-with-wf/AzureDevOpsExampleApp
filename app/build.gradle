@@ -10,8 +10,8 @@ android {
         applicationId "com.example.azuredevopsexampleapp"
         minSdk 26
         targetSdk 31
-        versionCode 1
-        versionName "1.0"
+        versionCode appVersionCode.toInteger()
+        versionName appVersionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
