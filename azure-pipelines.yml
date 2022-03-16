@@ -42,7 +42,7 @@ jobs:
     - task: AppCenterDistribute@3
       inputs:
         serverEndpoint: 'AzureDevOpsExampleAppAndroidDev'
-        appSlug: 'training.with.wf/apps/AzureDevOpsExampleApp'
+        appSlug: 'training.with.wf/AzureDevOpsExampleApp'
         appFile: '$(build.artifactStagingDirectory)/app-debug.apk'
         symbolsOption: 'android'
         releaseNotesOption: 'input' 
