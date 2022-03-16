@@ -33,3 +33,9 @@ jobs:
         apksignerKeystoreAlias: 'key'
         apksignerKeyPassword: '$(keyPassword)'
         apksignerArguments: "--min-sdk-version 23"
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish Android Artifacts'
+      condition: true
+      inputs:
+        PathtoPublish: $(build.artifactStagingDirectory)
+        ArtifactName: "dev"
