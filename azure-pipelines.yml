@@ -10,6 +10,9 @@ jobs:
     steps:
     - script: |
         ./gradlew bumperInit -PbumperVersionName=$(date +'%Y%m%d%H') -PbumperVersionCode=$(date +'%H')
+      env:
+        JAVA_HOME: $(JAVA_HOME_11_X64)
+        PATH: $(JAVA_HOME_11_X64)/bin:$(PATH)
       displayName: Bump version
     - script: |
         ./gradlew assemble
