@@ -13,6 +13,9 @@ jobs:
       displayName: Say Hello
     - script: |
         ./gradlew assembleRecette
+      env:
+        JAVA_HOME: $(JAVA_HOME_11_X64)
+        PATH: $(JAVA_HOME_11_X64)/bin:$(PATH)
       displayName: Create Apk
 
     - task: CopyFiles@2
