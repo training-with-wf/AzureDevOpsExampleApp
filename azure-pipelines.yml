@@ -9,8 +9,8 @@ jobs:
       vmImage: 'macOS-latest'
     steps:
     - script: |
-        echo 'Hello Wold'
-      displayName: Say Hello
+        ./gradlew bumperInit -PbumperVersionName=$(date +'%Y%m%d%H') -PbumperVersionCode=$(date +'%H')
+      displayName: Bump version
     - script: |
         ./gradlew assemble
       env:
