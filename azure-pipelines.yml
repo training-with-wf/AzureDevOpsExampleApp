@@ -12,7 +12,7 @@ jobs:
         echo 'Hello Wold'
       displayName: Say Hello
     - script: |
-        ./gradlew assembleRecette
+        ./gradlew assemble
       env:
         JAVA_HOME: $(JAVA_HOME_11_X64)
         PATH: $(JAVA_HOME_11_X64)/bin:$(PATH)
